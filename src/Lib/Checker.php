@@ -105,7 +105,7 @@ class Checker
 	 * @param  string $driver
 	 * @return driver
 	 */
-	private function createInstanceFor(string $driver)
+	private function createInstanceFor($driver)
 	{
 		return new $this->drivers[$driver]($this->config);
 	}

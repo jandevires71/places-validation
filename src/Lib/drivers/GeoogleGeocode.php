@@ -44,7 +44,7 @@ class GeoogleGeocode implements Contract
      * @param  string $address
      * @return array
      */
-    private function fetchAddress(string $address)
+    private function fetchAddress($address)
     {
         return json_decode(
             file_get_contents($this->resolveUrl($address)),
@@ -57,7 +57,7 @@ class GeoogleGeocode implements Contract
      * @param  string $address
      * @return string
      */
-    private function resolveUrl(string $address)
+    private function resolveUrl($address)
     {
         return $this->config['api'] .'?address='. urlencode($address);
     }
@@ -67,7 +67,7 @@ class GeoogleGeocode implements Contract
      * @param  string $address
      * @return Mixed
      */
-    public function validate(string $address)
+    public function validate($address)
     {
         $this->place = $this->fetchAddress($address);
 

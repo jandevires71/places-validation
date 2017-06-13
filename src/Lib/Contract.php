@@ -17,7 +17,7 @@ interface Contract
      * @param  string $address
      * @return Mixed
      */
-    public function validate(string $address);
+    public function validate($address);
 
     /**
      * Retrieve the place information.
